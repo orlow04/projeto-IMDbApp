@@ -251,7 +251,3 @@ elif p == 'N':
             while ator_certo == 'N':
                 reiniciar()
                 exit()
-            exit()
-
-elif p == 'N':
-    genero()
