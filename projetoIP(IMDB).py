@@ -31,10 +31,10 @@ def reiniciar():
 
         for i in range(0, 10):
             print(f'[{i + 1}] - {filme_2[i]}')
-        opção = int(input('Escolha uma opção: '))
-        while opção not in range(1, 11):
-            opção = int(input('Escolha uma opção: '))
-        filme_2 = filme_2[opção - 1]
+        opc = int(input('Escolha uma opção: '))
+        while opc not in range(1, 11):
+            opc = int(input('Escolha uma opção: '))
+        filme_2 = filme_2[opc - 1]
 
         # encontrando id do  filme:
         filmeid_2 = filme_2.movieID
@@ -51,39 +51,14 @@ def reiniciar():
             filme_certo = str(input('Esse é o filme que você estava procurando [s/n]? ')).upper()[0].strip()
         if filme_certo == 'S':
             pesquisar(filme_2)
-
-p = str(input('Você deseja pesquisar um filme [s/n]? ')).upper()[0].strip()
-
-while p not in 'SN':
-    p = str(input('Você deseja pesquisar um filme [s/n]? ')).upper()[0].strip()
-
-if p == 'S':
-    filme_entrada = ia.search_movie(input('Escreva o título do filme: '))
-
-    for i in range(0, 10):
-        print(f'[{i + 1}] - {filme_entrada[i]}')
-    opção = int(input('Escolha uma opção: '))
-    while opção not in range(1, 11):
-        opção = int(input('Escolha uma opção: '))
-    filme_entrada = filme_entrada[opção - 1]
-
-    movie_id = filme_entrada.movieID
-
-    filme_id = ia.get_movie(movie_id)
-
-    print(filme_id['title'])
-    filme_certo = str(input('Esse é o filme que você estava procurando [s/n]? ')).upper()[0].strip()
-
-    if filme_certo == 'S':
-        pesquisar(filme_entrada)
-
-    elif filme_certo == 'N':
-        while filme_certo == 'N':
+        elif filme_certo == 'N':
             reiniciar()
             exit()
+    elif usuario_sabe_filme == 'N':
+        genero()
 
+def genero():
 
-elif p == 'N':
     lista_filtros_portugues = ['Gênero', 'Pessoa']
     lista_de_filtros = ['genre', 'person']
     print('Escolha um filtro:')
@@ -164,3 +139,37 @@ elif p == 'N':
             while ator_certo == 'N':
                 reiniciar()
                 exit()
+
+
+p = str(input('Você deseja pesquisar um filme [s/n]? ')).upper()[0].strip()
+
+while p not in 'SN':
+    p = str(input('Você deseja pesquisar um filme [s/n]? ')).upper()[0].strip()
+
+if p == 'S':
+    filme_entrada = ia.search_movie(input('Escreva o título do filme: '))
+
+    for i in range(0, 10):
+        print(f'[{i + 1}] - {filme_entrada[i]}')
+    opc = int(input('Escolha uma opção: '))
+
+    while opc not in range(1, 11):
+        opc = int(input('Escolha uma opção: '))
+
+    filme_entrada = filme_entrada[opc - 1]
+    movie_id = filme_entrada.movieID
+    filme_id = ia.get_movie(movie_id)
+
+    print(filme_id['title'])
+    filme_certo = str(input('Esse é o filme que você estava procurando [s/n]? ')).upper()[0].strip()
+
+    if filme_certo == 'S':
+        pesquisar(filme_entrada)
+
+    elif filme_certo == 'N':
+        while filme_certo == 'N':
+            reiniciar()
+            exit()
+
+elif p == 'N':
+    genero()
