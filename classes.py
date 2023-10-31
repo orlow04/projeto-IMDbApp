@@ -98,4 +98,5 @@ class Cliente(Pessoa):
         return self.__tipo
 
     @property
-    def funcao:
+    def funcao(self):
+        return self.__funcao
