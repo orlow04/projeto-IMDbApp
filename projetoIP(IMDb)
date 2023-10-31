@@ -1,16 +1,10 @@
 from imdb import Cinemagoer
-
-ia = Cinemagoer()
-
 import requests
 
 API_URL = "https://api-inference.huggingface.co/models/lvwerra/distilbert-imdb"
 headers = {"Authorization": "Bearer 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"}
 
-def query(payload):
-    response = requests.post(API_URL, headers=headers, json=payload)
-    return response.json()
-
+ia = Cinemagoer()
 def pesquisar(txt):
     x_id = txt.movieID
     fx_id = ia.get_movie(x_id)
@@ -22,6 +16,10 @@ def pesquisar(txt):
     output = query({
         "inputs": input("")})
     print(output)
+
+def query(payload):
+    response = requests.post(API_URL, headers=headers, json=payload)
+    return response.json()
 
 def reiniciar():
     usuario_sabe_filme = str(input('Você sabe qual filme quer assistir [s/n]? ')).upper()[0].strip()
@@ -175,4 +173,3 @@ if p == 'S':
 
 elif p == 'N':
     genero()
-
