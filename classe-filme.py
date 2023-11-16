@@ -1,27 +1,3 @@
-class Pessoa:
-    def __init__(self, nome, funcao):
-        self.__nome = nome
-        self.__funcao = funcao
-
-    @property
-    def nome(self):
-        return self.__nome
-
-    @nome.setter
-    def nome(self, nome):
-        self.__nome = nome
-
-    @property
-    def funcao(self):
-        return self.__funcao
-
-    @funcao.setter
-    def funcao(self, funcao):
-        self.__funcao = funcao
-
-
-
-
 
 class Filme:
     def __init__(self):
@@ -92,17 +68,3 @@ class Filme:
     @sinopse.setter
     def sinopse(self, sinopse):
         self.__sinopse = sinopse
-
-
-class Cliente(Pessoa):
-    def __init__(self, nome, funcao, tipo):
-        super().__init__(nome, funcao)
-        self.__tipo = tipo
-
-    @property
-    def tipo(self):
-        return self.__tipo
-
-    @tipo.setter
-    def tipo(self, tipo):
-        self.__tipo = tipo
