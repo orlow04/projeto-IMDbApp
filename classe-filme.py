@@ -1,7 +1,10 @@
 
 class Filme:
+    #associação com a classe genero
     def __init__(self,genero):
         self.__genero = None
+
+    #agregação com as classes produtora,ator e diretor
 
     def __init(self, titulo, duracao, ano, classificacaoEtaria, plot, main, sinopse):
         self.__titulo = titulo
