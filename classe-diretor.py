@@ -28,3 +28,9 @@ def main(self, main):
   self.__main = main
 
 @property
+def biografia(self):
+  return self.__biografia
+
+@biografia.setter
+def biografia(self, biografia):
+  self.__biografia = biografia
