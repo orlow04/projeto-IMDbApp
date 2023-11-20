@@ -48,3 +48,8 @@ class Cinema:
   def vendas(self,vendas):
     self.__vendas = vendas
 
+# métodos da classe
+def comprarIngresso(self, valor):
+
+def getVendas(self):
+  return self.__vendas
