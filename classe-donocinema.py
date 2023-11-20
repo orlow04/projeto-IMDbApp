@@ -37,5 +37,11 @@ class donoCinema(Cliente):
   @valor.setter
   def valor(self,valor):
     self.__valor = valor
-    
+
+# métodos da classe
+def setValor(self, valor):
+  self.__valor = valor
+
+def setCinema(self, empresa):
+  self.__empresa = empresa
 
