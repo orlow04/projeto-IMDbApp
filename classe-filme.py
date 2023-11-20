@@ -1,7 +1,7 @@
 
 class Filme:
-    def __init__(self):
-        self.__titulo = None
+    def __init__(self,genero):
+        self.__genero = None
 
     def __init(self, titulo, duracao, ano, classificacaoEtaria, plot, main, sinopse):
         self.__titulo = titulo
@@ -68,3 +68,11 @@ class Filme:
     @sinopse.setter
     def sinopse(self, sinopse):
         self.__sinopse = sinopse
+
+    @property
+    def genero(self):
+        return self.__genero
+
+    @genero.setter
+    def genero(self,genero):
+        self.__genero = genero
