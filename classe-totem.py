@@ -30,5 +30,12 @@ class Totem:
   def cinema(self,catalogo):
     self.__catalogo = catalogo
 
+  #metódos da classe
+
+  def getCatalogo(self,catalogo):
+    return self.__catalogo
+  
+  def __str__(self):
+    return f'[{self.catalogo}]'
 
     
