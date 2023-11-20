@@ -34,3 +34,6 @@ def biografia(self):
 @biografia.setter
 def biografia(self, biografia):
   self.__biografia = biografia
+
+def __str__(self):
+  return f'Nome: {self.nome}\nOutros Trabalhos: {self.outros_trabalhos}\nMain: {self.main}\nBiografia: {self.biografia}'
