@@ -27,7 +27,7 @@ class Ator:
     return self.__outrosPapeis
 
   @outrosPapeis.setter
-  def outrosPapeis(self,nome):
+  def outrosPapeis(self,outrosPapeis):
     self.__outrosPapeis = outrosPapeis
 
   @property
@@ -35,14 +35,14 @@ class Ator:
     return self.__main
 
   @main.setter
-  def main(self,papel):
+  def main(self,main):
     self.__main = main
 
   @property
   def biografia(self):
     return self.__biografia
 
-  @main.setter
-  def biografia(self,papel):
+  @biografia.setter
+  def biografia(self,biografia):
     self.__biografia = biografia
   
