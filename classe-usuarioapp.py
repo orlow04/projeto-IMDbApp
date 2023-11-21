@@ -38,3 +38,10 @@ class usuarioApp(Cliente):
   def favorito(self,favorito):
     self.__favorito = favorito
     
+  #métodos da classe
+
+  def criarPerfil(self, perfil):
+    self.__perfil = perfil
+
+  def criarFav(self, favorito):
+    self.__favorito = favorito
