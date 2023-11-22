@@ -1,4 +1,4 @@
-# IMDB-APP : Projeto POO
+# IMDbApp : Projeto POO
 Repositório destinado aos entregáveis do projeto da disciplina de Programação Orientada a Objetos, do curso de Bacharelado de Inteligência Artificial.
 
 Os alunos Gabriel Orlow, Gustavo Fernandes, João Victor Borges, Matheus Franco e Murilo Alvares realizaram as atividades relacioandas ao projeto delegado pelo professor Vinícius,
