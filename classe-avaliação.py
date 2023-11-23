@@ -1,8 +1,8 @@
 
 class Avaliacao:
     def __init__(self,filme,usuarioApp):
-        self.__filme = NULL
-        self.__usuarioApp = NULL    
+        self.__filme = None
+        self.__usuarioApp = None    
     
     def __init__(self, nota, comentario):
         self.__nota = nota
