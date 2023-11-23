@@ -1,18 +1,21 @@
-class Totem:
-  def __init__(self):
-    self.__cinema = None
+class Ingresso:
+  def __init__(self,avaliacao,usuarioApp):
+    self.__avaliacao = None
+    self.__usuarioApp = None
 
-  def __init__(self,filmes,catalogo):
-    self.__filmes = filmes
-    self.__catalogo = catalogo
+  def __init__(self,venda,horario,poltrona,sala):
+    self.__venda = venda
+    self.__horario = horario
+    self.__poltrona = poltrona
+    self.__sala = sala
 
   @property
-  def cinema(self):
-    return self.__cinema
+  def avaliacao(self):
+    return self.__avaliacao
 
-  @cinema.setter
-  def cinema(self,cinema):
-    self.__cinema = cinema
+  @avaliacao.setter
+  def avaliacao(self,avaliacao):
+    self.__avaliacao = avaliacao
 
   @property
   def filmes(self):
