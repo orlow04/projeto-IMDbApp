@@ -1,10 +1,12 @@
-class donoCinema(Cliente):
-  def __init__(self,tipoCliente,cpf,empresa,endereco,valor):
-    super().__init__(tipoCliente)
+class Proprietario(Cliente):
+  def __init__(self,nome,email,senha,telefone,idioma,cpf,numeroFranquia):
+    super().__init__(nome)
+    super().__init__(email)
+    super().__init__(senha)
+    super().__init__(telefone)
+    super().__init__(idioma)
     self.__cpf = cpf
-    self.__empresa = empresa
-    self.__endereco = endereco
-    self.__valor = valor
+    self.__numeroFranquia = numeroFranquia
 
   @property
   def cpf(self):
@@ -15,33 +17,9 @@ class donoCinema(Cliente):
     self.__cpf = cpf
 
   @property
-  def empresa(self):
-    return self.__empresa
+  def numeroFranquia(self):
+    return self.__numeroFranquia
 
-  @empresa.setter
-  def empresa(self,empresa):
-    self.__empresa = empresa
-
-  @property
-  def endereco(self):
-    return self.__endereco
-
-  @endereco.setter
-  def endereco(self,endereco):
-    self.__endereco = endereco
-
-  @property
-  def valor(self):
-    return self.__valor
-
-  @valor.setter
-  def valor(self,valor):
-    self.__valor = valor
-
-# métodos da classe
-def setValor(self, valor):
-  self.__valor = valor
-
-def setCinema(self, empresa):
-  self.__empresa = empresa
-
+  @numeroFranquia.setter
+  def numeroFranquia(self,numeroFranquia):
+    self.__numeroFranquia = numeroFranquia
