@@ -18,27 +18,44 @@ class Ingresso:
     self.__avaliacao = avaliacao
 
   @property
-  def filmes(self):
-    return self.__filmes
+    def usuarioApp(self):
+        return self.__usuarioApp
 
-  @filmes.setter
-  def filmes(self,filmes):
-    self.__filmes = filmes
+    @usuarioApp.setter
+    def usuarioApp(self, usuarioApp):
+        self.__usuarioApp = usuarioApp
 
   @property
-  def catalogo(self):
-    return self.__catalogo
+  def venda(self):
+    return self.__venda
 
-  @catalogo.setter
-  def cinema(self,catalogo):
-    self.__catalogo = catalogo
+  @venda.setter
+  def venda(self,venda):
+    self.__venda = venda
 
-  #metódos da classe
+  @property
+  def horario(self):
+    return self.__horario
 
-  def getCatalogo(self,catalogo):
-    return self.__catalogo
-  
-  def __str__(self):
-    return f'[{self.catalogo}]'
+  @horario.setter
+  def horario(self,horario):
+    self.__horario = horario
+
+  @property
+  def poltrona(self):
+    return self.__poltrona
+
+  @poltrona.setter
+  def poltrona(self,poltrona):
+    self.__poltrona = poltrona
+
+  @property
+  def sala(self):
+    return self.__sala
+
+  @sala.setter
+  def sala(self,sala):
+    self.__sala = sala
+
 
     
