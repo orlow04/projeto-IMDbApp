@@ -1,13 +1,17 @@
 
-class Cliente(Pessoa):
-    def __init__(self, nome, funcao, tipo):
-        super().__init__(nome, funcao)
-        self.__tipo = tipo
+class Avaliacao:
+    def __init__(self,filme,usuarioApp):
+        self.__filme = NULL
+        self.__usuarioApp = NULL    
+    
+    def __init__(self, nota, comentario):
+        self.__nota = nota
+        self.__comentario = comentario
 
     @property
-    def tipo(self):
-        return self.__tipo
+    def nota(self):
+        return self.__nota
 
-    @tipo.setter
-    def tipo(self, tipo):
-        self.__tipo = tipo
+    @nota.setter
+    def nota(self, nota):
+        self.__nota = nota
