@@ -1,7 +1,10 @@
-class Pessoa:
-    def __init__(self, nome, funcao):
+class Cliente:
+    def __init__(self, nome, email, senha, telefone, idiona):
         self.__nome = nome
-        self.__funcao = funcao
+        self.__email = email
+        self.__senha = senha
+        self.__telefone = telefone
+        self.__idioma = idioma
 
     @property
     def nome(self):
@@ -12,10 +15,35 @@ class Pessoa:
         self.__nome = nome
 
     @property
-    def funcao(self):
-        return self.__funcao
+    def email(self):
+        return self.__email
 
-    @funcao.setter
-    def funcao(self, funcao):
-        self.__funcao = funcao
+    @email.setter
+    def email(self, email):
+        self.__email = email
+
+    @property
+    def senha(self):
+        return self.__senha
+    
+    @senha.setter
+    def senha(self, senha):
+        self.__senha = senha
+   
+    @property
+    def telefone(self):
+        return self.__telefone
+   
+    @telefone.setter
+    def (self, telefone):
+        self.__telefone = telefone 
+   
+    @property
+    def idioma(self):
+        return self.__idioma
+    
+    @idioma.setter
+    def idioma(self, idioma):
+        self.__idioma = idioma
+
 
