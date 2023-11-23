@@ -1,55 +1,52 @@
-class Cinema:
-  def __init__(self,donoCinema):
-    self.__donoCinema = None
+class Empresa:
+  def __init__(self,Proprietario):
+    self.__Proprietario = None
 
-  def __init__(self,empresa,endereco,idIngresso,vendas):
-    self.__empresa = empresa
-    self.__endereco = endereco
-    self.__idIngresso = idIngresso
-    self.__vendas = vendas
+  def __init__(self,cnpj,franquia,CEP,numero,complemento):
+    self.__cnpj = cnpj
+    self.__franquia = franquia
+    self.__CEP = CEP
+    self.__numero = numero
+    self.__complemento = complemento
 
-  @propery
-  def donoCinema(self):
-    return self.__donoCinema
+  @property
+  def Proprietario(self):
+    return self.__Proprietario
 
-  @donoCinema.setter
-  def donoCinema(self,donoCinema):
-    self.__donoCinema = donoCinema
+  @Proprietario.setter
+  def Propietario(self,Propietario):
+    self.__Propietario = Propietario
 
-  @propery
-  def empresa(self):
-    return self.__empresa
+  @property
+  def cnpj(self):
+    return self.__cnpj
 
-  @empresa.setter
-  def empresa(self,empresa):
-    self.__empresa = empresa
+  @cnpj.setter
+  def cnpj(self,cnpj):
+    self.__cnpj = cnpj
 
-  @propery
-  def endereco(self):
-    return self.__endereco
+  @property
+  def CEP(self):
+    return self.__CEP
     
-  @endereco.setter
-  def endereco(self,endereco):
-    self.__endereco = endereco
+  @CEP.setter
+  def CEP(self,CEP):
+    self.__CEP = CEP
 
-  @propery
-  def idIngresso(self):
-    return self.__idIngresso
+  @property
+  def numero(self):
+    return self.__numero
 
-  @idIngresso.setter
-  def idIngresso(self,idIngresso):
-    self.__idIngresso = idIngresso
+  @numero.setter
+  def numero(self,numero):
+    self.__numero = numero
 
-  @propery
-  def vendas(self):
-    return self.__vendas
+  @property
+  def complemento(self):
+    return self.__complemento
 
-  @vendas.setter
-  def vendas(self,vendas):
-    self.__vendas = vendas
+  @complemento.setter
+  def complemento(self,complemento):
+    self.__complemento = complemento
 
-# métodos da classe
-def comprarIngresso(self, valor):
 
-def getVendas(self):
-  return self.__vendas
