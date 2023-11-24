@@ -24,13 +24,11 @@ class Ingresso:
   @usuarioApp.setter
   def usuarioApp(self, usuarioApp):
       self._usuarioApp = usuarioApp
-
-  @property
-  def vendido(self):
+    
+  def get_vendido(self):
     return self._vendido
 
-  @vendido.setter
-  def vendido(self,vendido):
+  def set_vendido(self,vendido):
     self._vendido = vendido
 
   @property
