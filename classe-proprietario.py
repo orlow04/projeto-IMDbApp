@@ -3,7 +3,14 @@ class Proprietario(Cliente):
     super().__init__(nome,email,senha,telefone,idioma)
     self._cpf = cpf
     self._numeroFranquia = numeroFranquia
+    self.empresa = None
 
+  def checaFranquia(self):
+    if self.empresa.get_franquia():
+      print("A empresa é franquia")
+    else:
+      print("A empresa não é franquia")
+      
   @property
   def cpf(self):
     return self._cpf
