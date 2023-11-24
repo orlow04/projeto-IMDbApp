@@ -5,21 +5,21 @@ class Proprietario(Cliente):
     super().__init__(senha)
     super().__init__(telefone)
     super().__init__(idioma)
-    self.__cpf = cpf
-    self.__numeroFranquia = numeroFranquia
+    self._cpf = cpf
+    self._numeroFranquia = numeroFranquia
 
   @property
   def cpf(self):
-    return self.__cpf
+    return self._cpf
 
   @cpf.setter
   def cpf(self,cpf):
-    self.__cpf = cpf
+    self._cpf = cpf
 
   @property
   def numeroFranquia(self):
-    return self.__numeroFranquia
+    return self._numeroFranquia
 
   @numeroFranquia.setter
   def numeroFranquia(self,numeroFranquia):
-    self.__numeroFranquia = numeroFranquia
+    self._numeroFranquia = numeroFranquia
