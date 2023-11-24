@@ -1,48 +1,57 @@
+#Classe Ator:
 class Ator:
-  def __init__(self,nome,papel,outrosPapeis,main,biografia):
-    self.__nome = nome
-    self.__papel = papel
-    self.__outrosPapeis = outrosPapeis
-    self.__main = main
-    self.__biografia = biografia
-    
-  @property
-  def nome(self):
-    return self.__nome
+    def __init__(self, nome, idade, personagem, outroTrabalhos, biografia, premio):
+        self.__nome = nome
+        self.__idade = idade
+        self.__personagem = personagem
+        self.__outroTrabalhos = outroTrabalhos
+        self.__biografia = biografia
+        self.__premio = premio
 
-  @nome.setter
-  def nome(self,nome):
-    self.__nome = nome
+    @property
+    def nome(self):
+        return self.__nome
 
-  @property
-  def papel(self):
-    return self.__papel
+    @nome.setter
+    def nome(self, nome):
+        self.__nome = nome
 
-  @papel.setter
-  def papel(self,papel):
-    self.__papel = papel
+    @property
+    def idade(self):
+        return self.__idade
 
-  @property
-  def outrosPapeis(self):
-    return self.__outrosPapeis
+    @idade.setter
+    def idade(self, idade):
+        self.__idade = idade
 
-  @outrosPapeis.setter
-  def outrosPapeis(self,outrosPapeis):
-    self.__outrosPapeis = outrosPapeis
+    @property
+    def personagem(self):
+        return self.__personagem
 
-  @property
-  def main(self):
-    return self.__main
+    @personagem.setter
+    def personagem(self, personagem):
+        self.__personagem = personagem
 
-  @main.setter
-  def main(self,main):
-    self.__main = main
+    @property
+    def outroTrabalhos(self):
+        return self.__outroTrabalhos
 
-  @property
-  def biografia(self):
-    return self.__biografia
+    @outroTrabalhos.setter
+    def outroTrabalhos(self, outroTrabalhos):
+        self.__outroTrabalhos = outroTrabalhos
 
-  @biografia.setter
-  def biografia(self,biografia):
-    self.__biografia = biografia
-  
+    @property
+    def biografia(self):
+        return self.__biografia
+
+    @biografia.setter
+    def biografia(self, biografia):
+        self.__biografia = biografia
+
+    @property
+    def premio(self):
+        return self.__premio
+
+    @premio.setter
+    def premio(self, premio):
+        self.__premio = premio
