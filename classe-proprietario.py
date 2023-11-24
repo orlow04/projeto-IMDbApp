@@ -1,3 +1,5 @@
+from classe-cliente import Cliente
+
 class Proprietario(Cliente):
   def __init__(self,nome,email,senha,telefone,idioma,cpf,numeroFranquia):
     super().__init__(nome)
