@@ -1,13 +1,12 @@
 class Ingresso:
-  def __init__(self,avaliacao,usuarioApp):
-    self._avaliacao = None
-    self._usuarioApp = None
-
   def __init__(self,venda,horario,poltrona,sala):
     self._venda = venda
     self._horario = horario
     self._poltrona = poltrona
     self._sala = sala
+    self._avaliacao = None
+    self._usuarioApp = None
+
 
   @property
   def avaliacao(self):
@@ -18,12 +17,12 @@ class Ingresso:
     self._avaliacao = avaliacao
 
   @property
-    def usuarioApp(self):
-        return self._usuarioApp
+  def usuarioApp(self):
+      return self._usuarioApp
 
-    @usuarioApp.setter
-    def usuarioApp(self, usuarioApp):
-        self._usuarioApp = usuarioApp
+  @usuarioApp.setter
+  def usuarioApp(self, usuarioApp):
+      self._usuarioApp = usuarioApp
 
   @property
   def venda(self):
