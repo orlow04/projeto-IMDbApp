@@ -16,7 +16,7 @@ class usuarioApp(Cliente):
     self.produtorasFavorito = []
     self.cinemasFavorito = []
 
-  def _inscrever_desinscrever(self, lista, objeto, acao):
+  def _inscrever_desinscreverF(self, lista, objeto, acao):
       if isinstance(objeto, Filme):
           if objeto not in lista and acao == "inscrever":
               lista.append(objeto)
@@ -30,42 +30,115 @@ class usuarioApp(Cliente):
               print(f"{objeto.titulo} não está na lista de favoritos")
       else:
           print("Objeto inválido")
-
+  
+  def _inscrever_desinscreverG(self, lista, objeto, acao):
+      if isinstance(objeto, Genero):
+        if objeto not in lista and acao == "inscrever":
+            lista.append(objeto)
+            print(f"{objeto.tipo} foi adicionado na lista de favoritos")
+        elif objeto in lista and acao == "desinscrever":
+            lista.remove(objeto)
+            print(f"{objeto.tipo} foi retirado na lista de favoritos")
+        elif acao == "inscrever":
+            print(f"{objeto.tipo} já está adicionado na lista de favoritos")
+        elif acao == "desinscrever":
+            print(f"{objeto.tipo} não está na lista de favoritos")
+      else:
+          print("Objeto inválido")
+ 
+  def _inscrever_desinscreverA(self, lista, objeto, acao):
+      if isinstance(objeto, Ator):
+        if objeto not in lista and acao == "inscrever":
+            lista.append(objeto)
+            print(f"{objeto.nome} foi adicionado na lista de favoritos")
+        elif objeto in lista and acao == "desinscrever":
+            lista.remove(objeto)
+            print(f"{objeto.nome} foi retirado na lista de favoritos")
+        elif acao == "inscrever":
+            print(f"{objeto.nome} já está adicionado na lista de favoritos")
+        elif acao == "desinscrever":
+            print(f"{objeto.nome} não está na lista de favoritos")
+      else:
+          print("Objeto inválido")
+ 
+  def _inscrever_desinscreverD(self, lista, objeto, acao):
+      if isinstance(objeto, Diretor):
+          if objeto not in lista and acao == "inscrever":
+              lista.append(objeto)
+              print(f"{objeto.nome} foi adicionado na lista de favoritos")
+          elif objeto in lista and acao == "desinscrever":
+              lista.remove(objeto)
+              print(f"{objeto.nome} foi retirado na lista de favoritos")
+          elif acao == "inscrever":
+              print(f"{objeto.nome} já está adicionado na lista de favoritos")
+          elif acao == "desinscrever":
+              print(f"{objeto.nome} não está na lista de favoritos")
+      else:
+          print("Objeto inválido")
+ 
+  def _inscrever_desinscreverP(self, lista, objeto, acao):
+      if isinstance(objeto, Produtora):
+          if objeto not in lista and acao == "inscrever":
+              lista.append(objeto)
+              print(f"{objeto.nome} foi adicionado na lista de favoritos")
+          elif objeto in lista and acao == "desinscrever":
+              lista.remove(objeto)
+              print(f"{objeto.nome} foi retirado na lista de favoritos")
+          elif acao == "inscrever":
+              print(f"{objeto.nome} já está adicionado na lista de favoritos")
+          elif acao == "desinscrever":
+              print(f"{objeto.nome} não está na lista de favoritos")
+      else:
+          print("Objeto inválido")
+   def _inscrever_desinscreverC(self, lista, objeto, acao):
+      if isinstance(objeto, Empresa):
+          if objeto not in lista and acao == "inscrever":
+              lista.append(objeto)
+              print(f"{objeto.nome} foi adicionado na lista de favoritos")
+          elif objeto in lista and acao == "desinscrever":
+              lista.remove(objeto)
+              print(f"{objeto.nome} foi retirado na lista de favoritos")
+          elif acao == "inscrever":
+              print(f"{objeto.nome} já está adicionado na lista de favoritos")
+          elif acao == "desinscrever":
+              print(f"{objeto.nome} não está na lista de favoritos")
+      else:
+          print("Objeto inválido")
   def inscreverFilme(self, filme):
-      self._inscrever_desinscrever(self.filmesFavorito, filme, "inscrever")
+      self._inscrever_desinscreverF(self.filmesFavorito, filme, "inscrever")
 
   def desinscreverFilme(self, filme):
-      self._inscrever_desinscrever(self.filmesFavorito, filme, "desinscrever")
+      self._inscrever_desinscreverF(self.filmesFavorito, filme, "desinscrever")
 
   def inscreverGenero(self,genero):
-    self._inscrever_desinscrever(self.generosFavorito, genero, "inscrever")
+    self._inscrever_desinscreverG(self.generosFavorito, genero, "inscrever")
     
   def desinscreverGenero(self,genero):
-    self._inscrever_desinscrever(self.generosFavorito, genero, "desinscrever")
+    self._inscrever_desinscreverG(self.generosFavorito, genero, "desinscrever")
 
   def inscreverAtor(self,ator):
-    self._inscrever_desinscrever(self.atoresFavorito, ator, "inscrever")
+    self._inscrever_desinscreverA(self.atoresFavorito, ator, "inscrever")
     
   def desinscreverAtor(self,ator):
-    self._inscrever_desinscrever(self.atoresFavorito, ator, "desinscrever")
+    self._inscrever_desinscreverA(self.atoresFavorito, ator, "desinscrever")
     
   def inscreverDiretor(self,diretor):
-    self._inscrever_desinscrever(self.diretoresFavorito, diretor, "inscrever")
+    self._inscrever_desinscreverD(self.diretoresFavorito, diretor, "inscrever")
     
   def desinscreverDiretor(self,diretor):
-    self._inscrever_desinscrever(self.diretoresFavorito, diretor, "desinscrever")
+    self._inscrever_desinscreverD(self.diretoresFavorito, diretor, "desinscrever")
     
   def inscreverProdutora(self,produtora):
-    self._inscrever_desinscrever(self.produtorasFavorito, produtora, "inscrever")
+    self._inscrever_desinscreverP(self.produtorasFavorito, produtora, "inscrever")
     
   def desinscreverProdutora(self,produtora):
-    self._inscrever_desinscrever(self.produtorasFavorito, produtora, "desinscrever")
+    self._inscrever_desinscreverP(self.produtorasFavorito, produtora, "desinscrever")
     
   def inscreverCinema(self,empresa):
-    self._inscrever_desinscrever(self.cinemasFavorito, empresa, "inscrever")
+    self._inscrever_desinscreverC(self.cinemasFavorito, empresa, "inscrever")
     
   def desinscreverCinema(self,empresa):
-    self._inscrever_desinscrever(self.cinemasFavorito, empresa, "desinscrever")
+    self._inscrever_desinscreverC(self.cinemasFavorito, empresa, "desinscrever")
   
   @property
   def idade(self):
