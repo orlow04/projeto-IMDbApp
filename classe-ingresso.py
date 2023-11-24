@@ -1,9 +1,10 @@
 class Ingresso:
-  def __init__(self,venda,horario,poltrona,sala):
-    self._venda = venda
+  def __init__(self,vendido = True,horario,poltrona,sala,identificador):
+    self._vendido = vendido
     self._horario = horario
     self._poltrona = poltrona
     self._sala = sala
+    self._identificador = identificador
     self._avaliacao = None
     self._usuarioApp = None
 
@@ -25,12 +26,12 @@ class Ingresso:
       self._usuarioApp = usuarioApp
 
   @property
-  def venda(self):
-    return self._venda
+  def vendido(self):
+    return self._vendido
 
-  @venda.setter
-  def venda(self,venda):
-    self._venda = venda
+  @vendido.setter
+  def vendido(self,vendido):
+    self._vendido = vendido
 
   @property
   def horario(self):
@@ -55,3 +56,11 @@ class Ingresso:
   @sala.setter
   def sala(self,sala):
     self._sala = sala
+
+  @property
+  def identificador(self):
+    return self._identificador
+
+  @identificador.setter
+  def identificador(self,identificador)
+    self._identificador = identificador
