@@ -2,10 +2,10 @@ class Empresa:
   def __init__(self,Proprietario):
     self._Proprietario = None
 
-  def __init__(self,cnpj,franquia,CEP,numero,complemento):
+  def __init__(self,cnpj,franquia,cep,numero,complemento):
     self._cnpj = cnpj
     self._franquia = franquia
-    self._CEP = CEP
+    self.cep = cep
     self._numero = numero
     self._complemento = complemento
 
@@ -26,12 +26,12 @@ class Empresa:
     self._cnpj = cnpj
 
   @property
-  def CEP(self):
-    return self._CEP
+  def cep(self):
+    return self._cep
     
-  @CEP.setter
-  def CEP(self,CEP):
-    self._CEP = CEP
+  @cep.setter
+  def cep(self,cep):
+    self._cep = cep
 
   @property
   def numero(self):
