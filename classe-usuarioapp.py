@@ -5,24 +5,24 @@ class usuarioApp(Cliente):
     super().__init__(senha)
     super().__init__(telefone)
     super().__init__(idioma)
-    self.__idade = idade
-    self.__localizacao = localizacao
+    self._idade = idade
+    self._localizacao = localizacao
 
 
 
   @property
   def idade(self):
-    return self.__idade
+    return self._idade
 
   @idade.setter
   def idade(self,idade):
-    self.__idade = idade
+    self._idade = idade
 
   @property
   def localizacao(self):
-    return self.__localizacao
+    return self._localizacao
 
   @localizacao.setter
   def localizacao(self,localizacao):
-    self.__localizacao = localizacao
+    self._localizacao = localizacao
     
