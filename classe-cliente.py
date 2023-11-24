@@ -35,7 +35,7 @@ class Cliente:
         return self._telefone
    
     @telefone.setter
-    def (self, telefone):
+    def telefone(self, telefone):
         self._telefone = telefone 
    
     @property
