@@ -1,12 +1,10 @@
 
-class Avaliacao:
-    def __init__(self,filme,usuarioApp):
-        self._filme = None
-        self._usuarioApp = None    
-    
+class Avaliacao:   
     def __init__(self, nota, comentario):
         self._nota = nota
         self._comentario = comentario
+        self._filme = None
+        self._usuarioApp = None  
 
     @property
     def nota(self):
