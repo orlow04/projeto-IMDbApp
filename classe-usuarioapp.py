@@ -1,4 +1,7 @@
 class usuarioApp(Cliente):
+  def __init__(self,filme):
+    self.filme = None
+  
   def __init__(self,nome,email,senha,telefone,idioma,idade,localizacao):
     super().__init__(nome)
     super().__init__(email)
@@ -8,7 +11,15 @@ class usuarioApp(Cliente):
     self._idade = idade
     self._localizacao = localizacao
 
+  def __init__(self):
+    self.filmesFavorito = []
+    self.generosFavorito = []
+    self.atoresFavorito = []
+    self.diretoresFavorito = []
+    self.produtorasFavorito = []
+    self.cinemasFavorito = []
 
+  def favorito
 
   @property
   def idade(self):
