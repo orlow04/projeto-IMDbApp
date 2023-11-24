@@ -1,10 +1,6 @@
 class Proprietario(Cliente):
   def __init__(self,nome,email,senha,telefone,idioma,cpf,numeroFranquia):
-    super().__init__(nome)
-    super().__init__(email)
-    super().__init__(senha)
-    super().__init__(telefone)
-    super().__init__(idioma)
+    super().__init__(nome,email,senha,telefone,idioma)
     self._cpf = cpf
     self._numeroFranquia = numeroFranquia
 
