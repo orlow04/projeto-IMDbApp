@@ -1,37 +1,51 @@
-class Diretor:   
-  def __init__(self, nome, outros_trabalhos, main, biografia):
-    self.__nome = nome
-    self.__outros_trabalhos = outros_trabalhos
-    self.__main = main
-    self.__biografia = biografia
+#Classe Diretor:
+class Diretor:
+    def __init__(self, nome, idade, outrosTrabalhos, biografia, premio):
+        self.__nome = nome
+        self.__idade = idade
+        self.__outrosTrabalhos = outrosTrabalhos
+        self.__biografia = biografia
+        self.__premio = premio
 
-@property
-def nome(self):
-  return self.__nome
+    @property
+    def nome(self):
+        return self.__nome
 
-@nome.setter
-def nome(self, nome):
-  self.__nome = nome
+    @nome.setter
+    def nome(self, nome):
+        self.__nome = nome
 
-@outros_trabalhos.setter
-def outros_trabalhos(self, outros_trabalhos):
-  self.__outros_trabalhos = outros_trabalhos
+    @property
+    def idade(self):
+        return self.__idade
 
-@property
-def main(self):
-  return self.__main
+    @idade.setter
+    def idade(self, idade):
+        self.__idade = idade
 
-@main.setter
-def main(self, main):
-  self.__main = main
+    @property
+    def outrosTrabalhos(self):
+        return self.__outrosTrabalhos
 
-@property
-def biografia(self):
-  return self.__biografia
+    @outrosTrabalhos.setter
+    def outrosTrabalhos(self, outrosTrabalhos):
+      self.__outrosTrabalhos = outrosTrabalhos
 
-@biografia.setter
-def biografia(self, biografia):
-  self.__biografia = biografia
+    @property
+    def biografia(self):
+        return self.__biografia
 
-def __str__(self):
-  return f'Nome: {self.nome}\nOutros Trabalhos: {self.outros_trabalhos}\nMain: {self.main}\nBiografia: {self.biografia}'
+    @biografia.setter
+    def biografia(self, biografia):
+        self.__biografia = biografia
+
+    @property
+    def premio(self):
+        return self.__premio
+
+    @premio.setter
+    def premio(self, premio):
+      self.__premio = premio
+
+    def __str__(self):
+        return f'Nome: {self.nome}\nIdade: {self.idade}\nOutros trabalhos: {self.outrosTrabalhos}\nBiografia: {self.biografia}\nPrêmio: {self.premio}'
