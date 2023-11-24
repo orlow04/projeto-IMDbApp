@@ -38,34 +38,34 @@ class usuarioApp(Cliente):
       self._inscrever_desinscrever(self.filmesFavorito, filme, "desinscrever")
 
   def inscreverGenero(self,genero):
-    self._inscrever_desisncrever(self.generosFavorito, genero, "inscrever")
+    self._inscrever_desinscrever(self.generosFavorito, genero, "inscrever")
     
   def desinscreverGenero(self,genero):
-    self._inscrever_desisncrever(self.generosFavorito, genero, "desinscrever")
+    self._inscrever_desinscrever(self.generosFavorito, genero, "desinscrever")
 
   def inscreverAtor(self,ator):
-    self._inscrever_desisncrever(self.atoresFavorito, ator, "inscrever")
+    self._inscrever_desinscrever(self.atoresFavorito, ator, "inscrever")
     
   def desinscreverAtor(self,ator):
-    self._inscrever_desisncrever(self.atoresFavorito, ator, "desinscrever")
+    self._inscrever_desinscrever(self.atoresFavorito, ator, "desinscrever")
     
   def inscreverDiretor(self,diretor):
-    self._inscrever_desisncrever(self.diretoresFavorito, diretor, "inscrever")
+    self._inscrever_desinscrever(self.diretoresFavorito, diretor, "inscrever")
     
   def desinscreverDiretor(self,diretor):
-    self._inscrever_desisncrever(self.diretoresFavorito, diretor, "desinscrever")
+    self._inscrever_desinscrever(self.diretoresFavorito, diretor, "desinscrever")
     
   def inscreverProdutora(self,produtora):
-    self._inscrever_desisncrever(self.produtorasFavorito, produtora, "inscrever")
+    self._inscrever_desinscrever(self.produtorasFavorito, produtora, "inscrever")
     
   def desinscreverProdutora(self,produtora):
-    self._inscrever_desisncrever(self.produtorasFavorito, produtora, "desinscrever")
+    self._inscrever_desinscrever(self.produtorasFavorito, produtora, "desinscrever")
     
   def inscreverCinema(self,empresa):
-    self._inscrever_desisncrever(self.cinemasFavorito, empresa, "inscrever")
+    self._inscrever_desinscrever(self.cinemasFavorito, empresa, "inscrever")
     
   def desinscreverCinema(self,empresa):
-    self._inscrever_desisncrever(self.cinemasFavorito, empresa, "desinscrever")
+    self._inscrever_desinscrever(self.cinemasFavorito, empresa, "desinscrever")
   
   @property
   def idade(self):
