@@ -1,5 +1,6 @@
 class Empresa:
-  def __init__(self,cnpj,franquia=False,cep,numero,complemento):
+  def __init__(self,nome,cnpj,franquia=False,cep,numero,complemento):
+    self._nome = nome
     self._cnpj = cnpj
     self._franquia = franquia
     self.cep = cep
@@ -10,6 +11,13 @@ class Empresa:
   def associarProprietario(self,proprietario):
     self._proprietario = proprietario
 
+  @property
+  def nome(self):
+    return self._nome
+
+  @nome.setter(self,nome):
+    self.nome = nome
+  
   @property
   def cnpj(self):
     return self._cnpj
