@@ -41,3 +41,9 @@ class Empresa:
   @complemento.setter
   def complemento(self,complemento):
     self._complemento = complemento
+
+  def get_franquia(self):
+    return self.franquia
+
+  def set_franquia(self,franquia):
+    self.franquia = franquia
