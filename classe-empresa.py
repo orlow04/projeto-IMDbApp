@@ -2,7 +2,7 @@ class Empresa:
   def __init__(self,Proprietario):
     self._Proprietario = None
 
-  def __init__(self,cnpj,franquia,cep,numero,complemento):
+  def __init__(self,cnpj,franquia=boolean,cep,numero,complemento):
     self._cnpj = cnpj
     self._franquia = franquia
     self.cep = cep
