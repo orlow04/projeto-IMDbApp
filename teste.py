@@ -1,4 +1,5 @@
 from classe-filme import Filme
 from classe-usuarioapp import usuarioApp
 
-Gabriel = usuarioApp("Gabriel Orlow")
+user1 = usuarioApp("Gabriel Orlow")
+print(user1.name)
