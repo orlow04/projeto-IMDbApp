@@ -16,26 +16,22 @@ class usuarioApp(Cliente):
     self.produtorasFavorito = []
     self.cinemasFavorito = []
 
-  def inscreverFilme(self,filme):
-    if isinstance(filme,Filme):
-      if filme not in self.filmesFavorito:
-        self.filmesFavorito.append(filme)
-        print(f"{filme.titulo} foi adicionado na lista de favoritos")
+  def inscreverFilme(self, filme):
+      if isinstance(filme, Filme): 
+          self.filmesFavorito.append(filme)
+          print(f"{filme.titulo} foi adicionado na lista de favoritos")
       else:
-        print(f"{filme.titulo} já está adicionado na lista de favoritos")
-    else:
-      print("Objeto inválido")
-      
-  def desinscreverFilme(self,filme):
-    if isinstance(filme,Filme):
-      if filme in self.filmesFavorito:
-        self.filmesFavorito.remove(filme)
-        print(f"{filme.titulo} foi retirado na lista de favoritos")
+          print("Objeto inválido")
+
+  def desinscreverFilme(self, filme):
+      if isinstance(filme, Filme):  
+          if filme in self.filmesFavorito:
+              self.filmesFavorito.remove(filme)
+              print(f"{filme.titulo} foi retirado na lista de favoritos")
+          else:
+              print(f"{filme.titulo} não está na lista de favoritos")
       else:
-        print(f"{filme.titulo} não está na lista de favoritos")
-    else:
-      print("Objeto inválido")
- 
+          print("Objeto inválido")
   @property
   def idade(self):
     return self._idade
