@@ -1,21 +1,20 @@
-
+#Classe Filme:
 class Filme:
-    #associação com a classe genero
-    def __init__(self,genero):
-        self.__genero = None
-
-    #agregação com as classes produtora,ator e diretor
-
-    def __init(self, titulo, duracao, ano, classificacaoEtaria, plot, main, sinopse):
+    def __init__(self, titulo, duracao, ano, classificacaoEtaria, sinopse, notaIMDB, premio):
         self.__titulo = titulo
         self.__duracao = duracao
         self.__ano = ano
         self.__classificacaoEtaria = classificacaoEtaria
-        self.__plot = plot
-        self.__main = main
         self.__sinopse = sinopse
+        self.__notaIMDB = notaIMDB
+        self.__premio = premio
+        
+        self.__genero = None
+        
+        self.__produtora = None
+        self.__atores = []
+        self.__diretor = None
 
-    # Encapsular os atributos, de modo que eles não possam ser modificados diretamente
     @property
     def titulo(self):
         return self.__titulo
@@ -49,22 +48,6 @@ class Filme:
         self.__classificacaoEtaria = classificacaoEtaria
 
     @property
-    def plot(self):
-        return self.__plot
-
-    @plot.setter
-    def plot(self, plot):
-        self.__plot = plot
-
-    @property
-    def main(self):
-        return self.__main
-
-    @main.setter
-    def main(self, main):
-        self.__main = main
-
-    @property
     def sinopse(self):
         return self.__sinopse
 
@@ -73,9 +56,51 @@ class Filme:
         self.__sinopse = sinopse
 
     @property
+    def notaIMDB(self):
+        return self.__notaIMDB
+
+    @notaIMDB.setter
+    def notaIMDB(self, notaIMDB):
+        self.__notaIMDB = notaIMDB
+
+    @property
+    def premio(self):
+        return self.__premio
+
+    @premio.setter
+    def premio(self, premio):
+        self.__premio = premio
+
+    @property
     def genero(self):
         return self.__genero
 
     @genero.setter
-    def genero(self,genero):
-        self.__genero = genero
+    def genero(self, genero):
+        self.__genero = genero.tipo
+
+    @property
+    def produtora(self):
+        return self.__produtora
+
+    @produtora.setter
+    def produtora(self, produtora):
+        self.__produtora = produtora.nome
+
+    @property
+    def atores(self):
+        return self.__atores
+
+    def adicionar_ator(self, ator):
+        self.__atores.append(ator.nome)
+
+    @property
+    def diretor(self):
+        return self.__diretor
+
+    @diretor.setter
+    def diretor(self, diretor):
+        self.__diretor = diretor.nome
+
+    def __str__(self):
+      return f'Título: {self.__titulo}\nDuração: {self.__duracao}\nAno: {self.__ano}\nClassificação Etária: {self.__classificacaoEtaria}\nSinopse: {self.__sinopse}\nNota IMDB: {self.__notaIMDB}\nPrêmio: {self.__premio}\nGênero: {self.__genero}\nProdutora: {self.__produtora}\nAtores: {self.__atores}\nDiretor: {self.__diretor}'
