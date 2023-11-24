@@ -7,10 +7,17 @@ class Empresa:
     self._numero = numero
     self._complemento = complemento
     self._proprietario = None
+    self._ingresso = None
 
   def associarProprietario(self,proprietario):
     self._proprietario = proprietario
 
+  def checaVendido(self):
+    if self.ingresso.get_vendido():
+      print("1 ingresso vendido")
+    else:
+      print("Não foram vendidos ingressos")
+  
   @property
   def nome(self):
     return self._nome
