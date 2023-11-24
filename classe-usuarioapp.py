@@ -1,22 +1,14 @@
 class usuarioApp(Cliente):
-  def __init__(self,filme,genero,ator,diretor,produtora,empresa):
+  def __init__(self,nome,email,senha,telefone,idioma,idade,localizacao):
+    super().__init__(nome,email,senha,telefone,idioma)
+    self._idade = idade
+    self._localizacao = localizacao
     self.filme = None
     self.genero = None
     self.ator = None
     self.diretor = None
     self.produtora = None
     self.empresa = None
-  
-  def __init__(self,nome,email,senha,telefone,idioma,idade,localizacao):
-    super().__init__(nome)
-    super().__init__(email)
-    super().__init__(senha)
-    super().__init__(telefone)
-    super().__init__(idioma)
-    self._idade = idade
-    self._localizacao = localizacao
-
-  def __init__(self):
     self.filmesFavorito = []
     self.generosFavorito = []
     self.atoresFavorito = []
@@ -43,7 +35,7 @@ class usuarioApp(Cliente):
         print(f"{filme.titulo} não está na lista de favoritos")
     else:
       print("Objeto inválido")
-
+ 
   @property
   def idade(self):
     return self._idade
@@ -59,4 +51,3 @@ class usuarioApp(Cliente):
   @localizacao.setter
   def localizacao(self,localizacao):
     self._localizacao = localizacao
-    
