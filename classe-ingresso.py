@@ -1,61 +1,58 @@
 class Ingresso:
   def __init__(self,avaliacao,usuarioApp):
-    self.__avaliacao = None
-    self.__usuarioApp = None
+    self._avaliacao = None
+    self._usuarioApp = None
 
   def __init__(self,venda,horario,poltrona,sala):
-    self.__venda = venda
-    self.__horario = horario
-    self.__poltrona = poltrona
-    self.__sala = sala
+    self._venda = venda
+    self._horario = horario
+    self._poltrona = poltrona
+    self._sala = sala
 
   @property
   def avaliacao(self):
-    return self.__avaliacao
+    return self._avaliacao
 
   @avaliacao.setter
   def avaliacao(self,avaliacao):
-    self.__avaliacao = avaliacao
+    self._avaliacao = avaliacao
 
   @property
     def usuarioApp(self):
-        return self.__usuarioApp
+        return self._usuarioApp
 
     @usuarioApp.setter
     def usuarioApp(self, usuarioApp):
-        self.__usuarioApp = usuarioApp
+        self._usuarioApp = usuarioApp
 
   @property
   def venda(self):
-    return self.__venda
+    return self._venda
 
   @venda.setter
   def venda(self,venda):
-    self.__venda = venda
+    self._venda = venda
 
   @property
   def horario(self):
-    return self.__horario
+    return self._horario
 
   @horario.setter
   def horario(self,horario):
-    self.__horario = horario
+    self._horario = horario
 
   @property
   def poltrona(self):
-    return self.__poltrona
+    return self._poltrona
 
   @poltrona.setter
   def poltrona(self,poltrona):
-    self.__poltrona = poltrona
+    self._poltrona = poltrona
 
   @property
   def sala(self):
-    return self.__sala
+    return self._sala
 
   @sala.setter
   def sala(self,sala):
-    self.__sala = sala
-
-
-    
+    self._sala = sala
