@@ -1,4 +1,4 @@
-#Classe Filme:
+#Classe Filme: Ok
 class Filme:
     def __init__(self, titulo, duracao, ano, classificacaoEtaria, sinopse, notaIMDB, premio):
         self.__titulo = titulo
