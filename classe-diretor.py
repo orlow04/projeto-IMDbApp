@@ -1,4 +1,4 @@
-#Classe Diretor:
+#Classe Diretor: Ok
 class Diretor:
     def __init__(self, nome, idade, outrosTrabalhos, biografia, premio):
         self.__nome = nome
@@ -49,3 +49,14 @@ class Diretor:
 
     def __str__(self):
         return f'Nome: {self.nome}\nIdade: {self.idade}\nOutros trabalhos: {self.outrosTrabalhos}\nBiografia: {self.biografia}\nPrêmio: {self.premio}'
+
+# teste:
+diretor = Diretor('Murilo Alvares', 19, 'O menino que descobriu o vento', 'Nacsido em Goiânia...',
+                  'Oscar de Melhor Diretor')
+print(diretor.nome)
+print(diretor.idade)
+print(diretor.outrosTrabalhos)
+print(diretor.biografia)
+print(diretor.premio)
+print()
+print(diretor)
