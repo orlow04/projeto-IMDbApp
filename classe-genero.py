@@ -1,4 +1,4 @@
-#Classe Gênero:
+#Classe Genero: Ok
 class Genero:
     def __init__(self, tipo):
         self._tipo = tipo
@@ -12,4 +12,4 @@ class Genero:
         self._tipo = tipo
 
     def __str__(self):
-        return f'Gênero: {self._tipo}'
+        return f'Genero: {self._tipo}'
