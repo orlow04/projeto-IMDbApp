@@ -1,5 +1,6 @@
+#Classe Cliente: Ok
 class Cliente:
-    def __init__(self, nome, email, senha, telefone, idiona):
+    def __init__(self, nome, email, senha, telefone, idioma):
         self._nome = nome
         self._email = email
         self._senha = senha
@@ -45,3 +46,6 @@ class Cliente:
     @idioma.setter
     def idioma(self, idioma):
         self._idioma = idioma
+
+    def __str__(self):
+      return f'Nome: {self.nome}\nEmail: {self.email}\nSenha: {self.senha}\nTelefone: {self.telefone}\nIdioma: {self.idioma}'
