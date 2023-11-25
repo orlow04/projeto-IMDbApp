@@ -1,3 +1,4 @@
+#Classe Usuário App: Pendente
 class usuarioApp(Cliente):
   def __init__(self,nome,email,senha,telefone,idioma,idade,localizacao):
     super().__init__(nome,email,senha,telefone,idioma)
@@ -76,6 +77,7 @@ class usuarioApp(Cliente):
       else:
           print("Objeto inválido")
  
+  
   def _inscrever_desinscreverP(self, lista, objeto, acao):
       if isinstance(objeto, Produtora):
           if objeto not in lista and acao == "inscrever":
@@ -90,20 +92,22 @@ class usuarioApp(Cliente):
               print(f"{objeto.nome} não está na lista de favoritos")
       else:
           print("Objeto inválido")
-   def _inscrever_desinscreverC(self, lista, objeto, acao):
-      if isinstance(objeto, Empresa):
-          if objeto not in lista and acao == "inscrever":
-              lista.append(objeto)
-              print(f"{objeto.nome} foi adicionado na lista de favoritos")
-          elif objeto in lista and acao == "desinscrever":
-              lista.remove(objeto)
-              print(f"{objeto.nome} foi retirado na lista de favoritos")
-          elif acao == "inscrever":
-              print(f"{objeto.nome} já está adicionado na lista de favoritos")
-          elif acao == "desinscrever":
-              print(f"{objeto.nome} não está na lista de favoritos")
-      else:
-          print("Objeto inválido")
+   
+  def _inscrever_desinscreverC(self, lista, objeto, acao):
+    if isinstance(objeto, Empresa):
+        if objeto not in lista and acao == "inscrever":
+            lista.append(objeto)
+            print(f"{objeto.nome} foi adicionado na lista de favoritos")
+        elif objeto in lista and acao == "desinscrever":
+            lista.remove(objeto)
+            print(f"{objeto.nome} foi retirado na lista de favoritos")
+        elif acao == "inscrever":
+            print(f"{objeto.nome} já está adicionado na lista de favoritos")
+        elif acao == "desinscrever":
+            print(f"{objeto.nome} não está na lista de favoritos")
+    else:
+        print("Objeto inválido")
+  
   def inscreverFilme(self, filme):
       self._inscrever_desinscreverF(self.filmesFavorito, filme, "inscrever")
 
@@ -155,3 +159,6 @@ class usuarioApp(Cliente):
   @localizacao.setter
   def localizacao(self,localizacao):
     self._localizacao = localizacao
+
+  def __str__(self):  
+      return f"Nome: {self.nome}\nE-mail: {self.email}\nTelefone: {self.telefone}\nIdioma: {self.idioma}\nIdade: {self.idade}\nLocalização: {self.localizacao}\nLista de filmes favoritos: {self.filmesFavorito}\nLista de gêneros favoritos: {self.generosFavorito}\nLista de atores favoritos: {self.atoresFavorito}\nLista de diretores favoritos: {self.diretoresFavorito}\nLista de produtoras favoritas: {self.produtorasFavorito}\nLista de cinemas favoritos: {self.cinemasFavorito}"
