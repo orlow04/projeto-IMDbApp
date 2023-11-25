@@ -1,3 +1,4 @@
+#Classe Ingresso: Ok
 class Ingresso:
     def __init__(self, horario, poltrona, sala, identificador, vendido=True):
         self._vendido = vendido
@@ -24,10 +25,12 @@ class Ingresso:
     def usuarioApp(self, usuarioApp):
         self._usuarioApp = usuarioApp
 
-    def get_vendido(self):
+    @property
+    def vendido(self):
         return self._vendido
-
-    def set_vendido(self, vendido):
+    
+    @vendido.setter
+    def vendido(self, vendido):
         self._vendido = vendido
 
     @property
@@ -63,4 +66,5 @@ class Ingresso:
         self._identificador = identificador
 
     def __str__(self):
+        return f"Horário: {self.horario}\nPoltrona: {self.poltrona}\nSala: {self.sala}\nIdentificador: {self.identificador}\nVendido: {self._vendido}\nAvaliação: {self._avaliacao}\nUsuário: {self._usuarioApp}"
       return f"Horário: {self.horario}\nPoltrona: {self.poltrona}\nSala: {self.sala}\nIdentificador: {self.identificador}\nVendido: {self._vendido}\nAvaliação: {self._avaliacao}\nUsuário: {self._usuarioApp}"
