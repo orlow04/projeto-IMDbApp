@@ -1,4 +1,4 @@
-#Classe Ator:
+#Classe Ator: Ok
 class Ator:
     def __init__(self, nome, idade, personagem, outroTrabalhos, biografia, premio):
         self.__nome = nome
