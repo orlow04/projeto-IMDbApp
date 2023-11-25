@@ -1,4 +1,4 @@
-
+#Classe Avaliação: +/- Ok
 class Avaliacao:   
     def __init__(self, nota, comentario):
         self._nota = nota
@@ -37,3 +37,4 @@ class Avaliacao:
     @usuarioApp.setter
     def usuarioApp(self, usuarioApp):
         self._usuarioApp = usuarioApp
+
