@@ -1,4 +1,4 @@
-#Classe Produtora:
+#Classe Produtora: Ok
 class Produtora:
     def __init__(self, nome, sede, dono, endereco):
         self.__nome = nome
