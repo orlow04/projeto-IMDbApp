@@ -17,4 +17,3 @@ https://colab.research.google.com/drive/14fJ6GusScYngr6nWqJpaH0QokXid7lf3?usp=sh
 # Protótipo - Flutter Flow
 Para o desenvolvimento do protótipo do aplicativo, foi utilizado a ferramenta FlutterFlow. O link do projeto segue abaixo:
 https://app.flutterflow.io/share/cinema-p-o-o-596t6k
-
