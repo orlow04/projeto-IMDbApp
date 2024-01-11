@@ -67,4 +67,4 @@ class Ingresso:
 
     def __str__(self):
         return f"Horário: {self.horario}\nPoltrona: {self.poltrona}\nSala: {self.sala}\nIdentificador: {self.identificador}\nVendido: {self._vendido}\nAvaliação: {self._avaliacao}\nUsuário: {self._usuarioApp}"
-      return f"Horário: {self.horario}\nPoltrona: {self.poltrona}\nSala: {self.sala}\nIdentificador: {self.identificador}\nVendido: {self._vendido}\nAvaliação: {self._avaliacao}\nUsuário: {self._usuarioApp}"
+
