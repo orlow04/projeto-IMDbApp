@@ -1,4 +1,12 @@
 #Classe Usuário App: Pendente
+from filme import Filme
+from cliente import Cliente
+from genero import Genero
+from ator import Ator
+from diretor import Diretor
+from produtora import Produtora
+from empresa import Empresa
+
 class usuarioApp(Cliente):
   def __init__(self,nome,email,senha,telefone,idioma,idade,localizacao):
     super().__init__(nome,email,senha,telefone,idioma)
