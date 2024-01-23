@@ -28,10 +28,22 @@ class usuarioApp(Cliente):
   def _inscrever_desinscreverF(self, lista, objeto, acao):
       if isinstance(objeto, Filme):
           if objeto not in lista and acao == "inscrever":
-              lista.append(objeto)
+              lista.append(objeto.titulo)
+              lista.append(objeto.duracao)
+              lista.append(objeto.ano)
+              lista.append(objeto.classificacaoEtaria)
+              lista.append(objeto.sinopse)
+              lista.append(objeto.notaIMDB)
+              lista.append(objeto.premio)
               print(f"{objeto.titulo} foi adicionado na lista de favoritos")
           elif objeto in lista and acao == "desinscrever":
-              lista.remove(objeto)
+              lista.remove(objeto.titulo)
+              lista.remove(objeto.duracao)
+              lista.remove(objeto.ano)
+              lista.remove(objeto.classificacaoEtaria)
+              lista.remove(objeto.sinopse)
+              lista.remove(objeto.notaIMDB)
+              lista.remove(objeto.premio)
               print(f"{objeto.titulo} foi retirado na lista de favoritos")
           elif acao == "inscrever":
               print(f"{objeto.titulo} já está adicionado na lista de favoritos")
@@ -43,10 +55,10 @@ class usuarioApp(Cliente):
   def _inscrever_desinscreverG(self, lista, objeto, acao):
       if isinstance(objeto, Genero):
         if objeto not in lista and acao == "inscrever":
-            lista.append(objeto)
+            lista.append(objeto.tipo)
             print(f"{objeto.tipo} foi adicionado na lista de favoritos")
         elif objeto in lista and acao == "desinscrever":
-            lista.remove(objeto)
+            lista.remove(objeto.tipo)
             print(f"{objeto.tipo} foi retirado na lista de favoritos")
         elif acao == "inscrever":
             print(f"{objeto.tipo} já está adicionado na lista de favoritos")
@@ -58,10 +70,20 @@ class usuarioApp(Cliente):
   def _inscrever_desinscreverA(self, lista, objeto, acao):
       if isinstance(objeto, Ator):
         if objeto not in lista and acao == "inscrever":
-            lista.append(objeto)
+            lista.append(objeto.nome)
+            lista.append(objeto.idade)
+            lista.append(objeto.personagem)
+            lista.append(objeto.outroTrabalhos)
+            lista.append(objeto.biografia)
+            lista.append(objeto.premio)
             print(f"{objeto.nome} foi adicionado na lista de favoritos")
         elif objeto in lista and acao == "desinscrever":
-            lista.remove(objeto)
+            lista.remove(objeto.nome)
+            lista.remove(objeto.idade)
+            lista.remove(objeto.personagem)
+            lista.remove(objeto.outroTrabalhos)
+            lista.remove(objeto.biografia)
+            lista.remove(objeto.premio)
             print(f"{objeto.nome} foi retirado na lista de favoritos")
         elif acao == "inscrever":
             print(f"{objeto.nome} já está adicionado na lista de favoritos")
@@ -73,10 +95,18 @@ class usuarioApp(Cliente):
   def _inscrever_desinscreverD(self, lista, objeto, acao):
       if isinstance(objeto, Diretor):
           if objeto not in lista and acao == "inscrever":
-              lista.append(objeto)
+              lista.append(objeto.nome)
+              lista.append(objeto.idade)
+              lista.append(objeto.outrosTrabalhos)
+              lista.append(objeto.biografia)
+              lista.append(objeto.premio)
               print(f"{objeto.nome} foi adicionado na lista de favoritos")
           elif objeto in lista and acao == "desinscrever":
-              lista.remove(objeto)
+              lista.remove(objeto.nome)
+              lista.remove(objeto.idade)
+              lista.remove(objeto.outrosTrabalhos)
+              lista.remove(objeto.biografia)
+              lista.remove(objeto.premio)
               print(f"{objeto.nome} foi retirado na lista de favoritos")
           elif acao == "inscrever":
               print(f"{objeto.nome} já está adicionado na lista de favoritos")
@@ -89,10 +119,16 @@ class usuarioApp(Cliente):
   def _inscrever_desinscreverP(self, lista, objeto, acao):
       if isinstance(objeto, Produtora):
           if objeto not in lista and acao == "inscrever":
-              lista.append(objeto)
+              lista.append(objeto.nome)
+              lista.append(objeto.sede)
+              lista.append(objeto.dono)
+              lista.append(objeto.endereco)
               print(f"{objeto.nome} foi adicionado na lista de favoritos")
           elif objeto in lista and acao == "desinscrever":
-              lista.remove(objeto)
+              lista.remove(objeto.nome)
+              lista.remove(objeto.sede)
+              lista.remove(objeto.dono)
+              lista.remove(objeto.endereco)
               print(f"{objeto.nome} foi retirado na lista de favoritos")
           elif acao == "inscrever":
               print(f"{objeto.nome} já está adicionado na lista de favoritos")
@@ -104,10 +140,18 @@ class usuarioApp(Cliente):
   def _inscrever_desinscreverC(self, lista, objeto, acao):
     if isinstance(objeto, Empresa):
         if objeto not in lista and acao == "inscrever":
-            lista.append(objeto)
+            lista.append(objeto.nome)
+            lista.append(objeto.cnpj)
+            lista.append(objeto.cep)
+            lista.append(objeto.numero)
+            lista.append(objeto.complemento)
             print(f"{objeto.nome} foi adicionado na lista de favoritos")
         elif objeto in lista and acao == "desinscrever":
-            lista.remove(objeto)
+            lista.remove(objeto.nome)
+            lista.remove(objeto.cnpj)
+            lista.remove(objeto.cep)
+            lista.remove(objeto.numero)
+            lista.remove(objeto.complemento)
             print(f"{objeto.nome} foi retirado na lista de favoritos")
         elif acao == "inscrever":
             print(f"{objeto.nome} já está adicionado na lista de favoritos")
@@ -170,3 +214,18 @@ class usuarioApp(Cliente):
 
   def __str__(self):  
       return f"Nome: {self.nome}\nE-mail: {self.email}\nTelefone: {self.telefone}\nIdioma: {self.idioma}\nIdade: {self.idade}\nLocalização: {self.localizacao}\nLista de filmes favoritos: {self.filmesFavorito}\nLista de gêneros favoritos: {self.generosFavorito}\nLista de atores favoritos: {self.atoresFavorito}\nLista de diretores favoritos: {self.diretoresFavorito}\nLista de produtoras favoritas: {self.produtorasFavorito}\nLista de cinemas favoritos: {self.cinemasFavorito}"
+  
+user = usuarioApp("João","joao@gmail.com","123456","(11) 99999-9999","Português",18,"São Paulo")
+filme = Filme("Vingadores: Ultimato",2019,"Ação","3h 2m","12 anos","https://www.youtube.com/watch?v=6ZfuNTqbHE8","https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q6725aR8Zs4IwGMXzZT8aC8lh41.jpg")
+genero = Genero("Ação")
+ator = Ator("Robert Downey Jr.", 55,"Tony Stark / Homem de Ferro","https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg","https://www.themoviedb.org/person/3223-robert-downey-jr","sem oscars")
+diretor = Diretor("Anthony Russo", 50,"https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8CuuNIKMzMUL1NKOPv9AqEwM7og.jpg","https://www.themoviedb.org/person/19271-anthony-russo","sem oscars")
+produtora = Produtora("Marvel Studios","USA","https://www.themoviedb.org/t/p/w600_and_h900_bestv2/86B8qZpAKyw0jZMHCV1qUEcxl9r.jpg","https://www.themoviedb.org/company/420")
+empresa = Empresa("Cinemark","00.000.000/0000-00","Av. Paulista" ,1234,"São Paulo")
+user.inscreverFilme(filme)
+user.inscreverGenero(genero)
+user.inscreverAtor(ator)
+user.inscreverDiretor(diretor)
+user.inscreverProdutora(produtora)
+user.inscreverCinema(empresa)
+print(user)
