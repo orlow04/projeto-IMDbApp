@@ -7,8 +7,12 @@
 </head>
 <body>
     <h1>Dashboard</h1>
-    <p>Hello, {{ user.username }}!</p>
+    <p>Ola, {{ user.username }}!</p>
+    <p>Profile Information: {{ user.profile_info }}</p>
     <p><a href="{{ url_for('profile') }}">Edit Profile</a></p>
     <p><a href="{{ url_for('logout') }}">Logout</a></p>
+
+    <!-- Add a link to the mobile app -->
+    <p><a href="https://app.flutterflow.io/run/r6Ve4KnFPqgwuT2CiIIh">Faça o download do nosso App!!</a></p>
 </body>
 </html>

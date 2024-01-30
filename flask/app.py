@@ -1,25 +1,26 @@
+import os
 from flask import Flask, render_template, redirect, url_for, flash
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+from flask_migrate import Migrate
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your_secret_key'  # Replace with a secret key of your choice
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your_default_secret_key')  # Use environment variable or a default value
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI', 'sqlite:///users.db')  # Use environment variable or a default value
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
-
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(30), unique=True, nullable=False)
     password = db.Column(db.String(80), nullable=False)
-
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -37,10 +38,10 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[InputRequired(), Length(min=6, max=80)])
     submit = SubmitField('Login')
 
-
 class ProfileForm(FlaskForm):
     profile_info = StringField('Profile Information', validators=[Length(max=100)])
     submit = SubmitField('Save Profile')
+
 
 
 @app.route('/')
@@ -56,7 +57,7 @@ def register():
         new_user = User(username=form.username.data, password=form.password.data)
         db.session.add(new_user)
         db.session.commit()
-        flash('Registration successful! You can now log in.', 'success')
+        flash('Registro bem sucedido! Você pode se logar!.', 'success')
         return redirect(url_for('login'))
 
     return render_template('register.html', form=form)
@@ -70,10 +71,10 @@ def login():
         user = User.query.filter_by(username=form.username.data).first()
         if user and user.password == form.password.data:
             login_user(user)
-            flash('Login successful!', 'success')
+            flash('Login bem sucedido!', 'success')
             return redirect(url_for('dashboard'))
         else:
-            flash('Login failed. Check your username and password.', 'danger')
+            flash('Falha ao logar. Confira seu email e/ou senha', 'danger')
 
     return render_template('login.html', form=form)
 
@@ -88,7 +89,7 @@ def dashboard():
 @login_required
 def logout():
     logout_user()
-    flash('Logout successful!', 'success')
+    flash('Logout bem sucedido!', 'success')
     return redirect(url_for('index'))
 
 
@@ -100,10 +101,13 @@ def profile():
     if form.validate_on_submit():
         current_user.profile_info = form.profile_info.data
         db.session.commit()
-        flash('Profile updated successfully!', 'success')
+        flash('Perfil autualizado com sucesso!', 'success')
         return redirect(url_for('dashboard'))
 
+
+
     return render_template('profile.html', form=form, user=current_user)
+
 
 
 if __name__ == '__main__':
